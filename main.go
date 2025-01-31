@@ -1,6 +1,11 @@
 package main
 
 import (
+	"fmt"
+	"os"
+
+	"github.com/joho/godotenv"
+
 	// intro "golang/01_intro"
 	// variables "golang/02_variables"
 	// input "golang/03_input"
@@ -17,6 +22,16 @@ import (
 )
 
 func main() {
+
+	err := godotenv.Load("./.env")
+	if err != nil {
+		fmt.Println("[Error]: error loading '.env' file")
+		return
+	} else {
+		var app string = os.Getenv("APP")
+		fmt.Println("[APP]:", app)
+	}
+
 	// intro.Intro()
 
 	// variables.Variables_Datatypes()
