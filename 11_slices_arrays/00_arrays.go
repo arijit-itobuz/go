@@ -15,7 +15,7 @@ func Arrays() {
 		index 12 is out of bounds (>= 10)
 	*/
 
-	var v5 = v3[2:5]
+	var v5 = v3[2:5] // 2 index is inclusive, 5 index is exclusive
 	var v6 = v3[:]
 	var v7 = v3[5:]
 	var v8 = v3[:5]
